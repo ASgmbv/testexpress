@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+   app:
+      ports:
+         - 3000:3000
+      environment:
+         - VIRTUAL_HOST=backend.startupnation.kg
+         - LETSENCRYPT_HOST=backend.startupnation.kg
+         - LETSENCRYPT_EMAIL=alimbeksagymbaev@gmail.com
+         - NETWORK=proxy
+         - VIRTUAL_PORT=3000
+      build: .
+      command: node server.js
