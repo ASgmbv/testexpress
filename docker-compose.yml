@@ -11,6 +11,10 @@ services:
          - VIRTUAL_PORT=3000
       build: .
       command: node server.js
+      deploy:
+         replicas: 1
+         restart_policy:
+            condition: any
 networks:
    default:
       external: true
