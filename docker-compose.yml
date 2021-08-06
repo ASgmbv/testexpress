@@ -11,3 +11,5 @@ services:
          - VIRTUAL_PORT=3000
       build: .
       command: node server.js
+      networks:
+         - proxy
